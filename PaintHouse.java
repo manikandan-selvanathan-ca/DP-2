@@ -1,7 +1,7 @@
 public class PaintHouse {
 
     //TC:O(MN) where M is number of rows of costs and N is number of columns of costs.
-    //SC: O(1) We are just using three constant variable to calculcate the previous values;
+    //SC: O(1) We are just using three constant variable to calculcate the previous values
     public int minCost(int[][] costs) {
         if (costs == null || costs.length == 0)
             return 0;
@@ -34,6 +34,8 @@ public class PaintHouse {
         return Math.min(case1, Math.min(case2, case3));
     }
 
+    //TC:O(2^N) Where N is number of rows 
+    //SC:O(2^N) For recursion call stack.
     private int helper(int[][] costs, int min, int row, int lastColor) {
 
         // base
